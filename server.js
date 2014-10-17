@@ -3,9 +3,10 @@ var
     , io = require('socket.io').listen(app)
     , fs = require('fs')
     , bombers = []
+    , port = process.env.PORT || 5000
 ;
 
-app.listen(9000);
+app.listen(port);
 
 function handler(req, res) {
     fs.readFile(
